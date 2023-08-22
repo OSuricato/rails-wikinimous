@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h2>Search Results for "<%= @search_term %>"</h2>
+
+  <ul class="list-group">
+    <% @search_results.each do |article| %>
+      <li class="list-group-item">
+        <%= link_to article.title, article_path(article) %>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Back to articles', articles_path, class: "btn btn-secondary mt-3" %>
+</div>
